@@ -2,7 +2,7 @@
 
 This repo is a copy of the main repo which is private.
 
-This project is a school project for an exam. The goal was to create an app to manage juries for school projects.
+This project was a school project for an exam. The goal was to create an app to manage juries for school projects.
 
 By managing juries it means being able to :
 
