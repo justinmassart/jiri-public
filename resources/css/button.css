@@ -1,0 +1,169 @@
+button.btn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    font-family: "urbanistRegular", Inter, Arial, sans-serif;
+
+    & a {
+        display: block;
+        text-decoration: none;
+        color: black;
+        padding: 1rem 2rem;
+        font-size: 2rem;
+        border: 1px solid black;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        text-align: center;
+        position: relative;
+        transition: all 0.2s;
+    }
+
+    & a span {
+        font-family: "urbanistRegular", Inter, Arial, sans-serif;
+        position: relative;
+        z-index: 2;
+        font-variation-settings: "wght" 500;
+    }
+
+    & a:after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 0;
+        min-height: 100%;
+        background: #0074c2;
+        transition: all 0.2s;
+    }
+
+    & a:hover {
+        color: #fff;
+        overflow: hidden;
+    }
+
+    & a:hover:after {
+        width: 100%;
+    }
+}
+
+button.btn-red {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    font-family: "urbanistRegular", Inter, Arial, sans-serif;
+
+    & a {
+        display: block;
+        text-decoration: none;
+        color: black;
+        padding: 1rem 2rem;
+        font-size: 2rem;
+        border: 1px solid black;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        text-align: center;
+        position: relative;
+        transition: all 0.2s;
+    }
+
+    & a span {
+        font-family: "urbanistRegular", Inter, Arial, sans-serif;
+        position: relative;
+        z-index: 2;
+        font-variation-settings: "wght" 500;
+    }
+
+    & a:after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 0;
+        min-height: 100%;
+        background: #d62828;
+        transition: all 0.2s;
+    }
+
+    & a:hover {
+        color: #fff;
+        overflow: hidden;
+    }
+
+    & a:hover:after {
+        width: 100%;
+    }
+}
+
+button.btn-white {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    font-family: "urbanistRegular", Inter, Arial, sans-serif;
+
+    & a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        padding: 1rem 2rem;
+        font-size: 2rem;
+        border: 1px solid white;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        text-align: center;
+        position: relative;
+        transition: all 0.2s;
+    }
+
+    & a span {
+        font-family: "urbanistRegular", Inter, Arial, sans-serif;
+        position: relative;
+        z-index: 2;
+        font-variation-settings: "wght" 500;
+    }
+
+    & a:after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 0;
+        min-height: 100%;
+        background: white;
+        transition: all 0.2s;
+    }
+
+    & a:hover {
+        color: #0074c2;
+        overflow: hidden;
+    }
+
+    & a:hover:after {
+        width: 100%;
+    }
+}
+
+button.btn:disabled {
+    background-color: transparent;
+    transition: none;
+
+    & a {
+        opacity: 0.5;
+        cursor: not-allowed;
+        transition: none;
+    }
+
+    & a:after {
+        transition: none;
+        background-color: transparent;
+    }
+
+    & a:hover {
+        color: black;
+        transition: none;
+    }
+
+    & a:hover:after {
+        width: 100%;
+        transition: none;
+    }
+}

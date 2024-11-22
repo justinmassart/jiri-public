@@ -1,0 +1,475 @@
+.modal {
+    background-color: rgba(0, 0, 0, 0.35);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    scrollbar-width: none;
+
+    & .modal__content {
+        min-width: 50rem;
+        max-width: 90%;
+        max-height: 90%;
+        background-color: white;
+        border-radius: 0.5rem;
+        overflow: scroll;
+
+        & div.modal__content__container {
+            padding: 2rem;
+
+            & .modal__footer {
+                min-height: 1px;
+            }
+
+            & .modal__forms {
+                max-width: 100%;
+                max-height: 60rem;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                column-gap: 10rem;
+                margin-bottom: 4rem;
+
+                & .form__title {
+                    display: inline;
+                    font-size: 3.2rem;
+                }
+
+                & .jiri__modal__form {
+                    & .modal__form__title {
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: column;
+                        padding: 0 2rem;
+                        margin: 2rem 0;
+                        max-height: 9rem;
+                    }
+                }
+            }
+
+            & .modal__header {
+                & .modal__header__exit {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    & .flex-inline {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        display: none;
+
+                        & h2 {
+                            margin-right: 2rem;
+                        }
+                    }
+                }
+
+                & .contact__import {
+                    margin-bottom: 2rem;
+                }
+            }
+
+            & .modal__title {
+                font-size: 3.2rem;
+                font-variation-settings: "wght" 300;
+            }
+
+            & .modal__exit {
+                color: #d62e00;
+                font-variation-settings: "wght" 500;
+                font-size: 3rem;
+                padding: 1rem;
+                cursor: pointer;
+            }
+        }
+    }
+
+    & .modal__content::-webkit-scrollbar {
+        display: none;
+    }
+
+    & .modal__content {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+}
+
+.modal::-webkit-scrollbar {
+    display: none;
+}
+
+div.modal__over {
+    min-width: 50rem;
+    max-width: 90%;
+    max-height: 90%;
+    background-color: white;
+    border-radius: 0.5rem;
+    overflow: hidden scroll;
+    padding: 2rem;
+    font-size: 2.4rem;
+    scrollbar-width: none;
+
+    & .modal__exit {
+        color: #d62e00;
+        font-variation-settings: "wght" 500;
+        font-size: 3rem;
+        padding: 1rem;
+        cursor: pointer;
+    }
+}
+
+div.modal__over::-webkit-scrollbar {
+    display: none;
+}
+
+.jiris {
+    & .modal {
+        & .modal__content {
+            & .tall__modal__over {
+                min-height: 68rem;
+            }
+
+            & .sorts__actions__filters {
+                margin-top: 2rem;
+            }
+
+            & .jiri__contacts__form {
+                min-width: 50rem;
+                margin-bottom: 4rem;
+
+                & ul.jiri__attendances__list {
+                    max-height: calc(60.2rem - 13rem);
+                    overflow: hidden scroll;
+
+                    & li {
+                        & .main__list__item {
+                            min-width: 100%;
+                        }
+                    }
+
+                    & li:nth-child(odd) {
+                        background-color: #e5f5ff;
+                    }
+                }
+
+                & ul.jiri__attendances__list-edit {
+                    max-height: calc(60rem - 9rem);
+                    overflow: hidden scroll;
+
+                    & li {
+                        display: flex;
+                        max-width: 100%;
+                        & .main__list__item {
+                            min-width: 90%;
+                            max-width: 90%;
+                        }
+                        & span.exit {
+                            color: white;
+                            font-size: 5rem;
+                            cursor: pointer;
+                            background-color: #d62e00;
+                            min-width: 10%;
+                            border-bottom: 1px solid white;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+
+                        & span.exit:hover {
+                            background-color: #962000;
+                        }
+                    }
+
+                    & li.no_reduce {
+                        & .main__list__item {
+                            min-width: 100%;
+                            max-width: 100%;
+                        }
+                    }
+
+                    & li:nth-child(odd) {
+                        background-color: #e5f5ff;
+                    }
+                }
+
+                & .jiri__contacts__form__filters {
+                    max-height: 20rem;
+                }
+            }
+
+            & .jiri__projects__form {
+                min-width: 50rem;
+
+                & .modal__form__list__container {
+                    margin-top: 4rem;
+                }
+
+                & .jiri__projects__form__weighting {
+                    font-size: 2.4rem;
+                }
+
+                & ul {
+                    min-height: 46rem;
+                    max-height: 50rem;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-auto-rows: min-content;
+                    column-gap: 2rem;
+                    row-gap: 2rem;
+                    margin: 2rem;
+
+                    & li {
+                        padding: 2rem;
+                        border: 1px solid #000;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 2.8rem;
+                        font-variation-settings: "wght" 500;
+                        height: 4rem;
+                        border-radius: 1rem;
+                        cursor: pointer;
+                        position: relative;
+                    }
+
+                    & li:hover {
+                        box-shadow: inset 0 0 0 2px #0074c2;
+                        background-color: #f7f7f7;
+                    }
+
+                    & li.long {
+                        grid-column: 1 / span 2;
+                        order: 1;
+                    }
+                }
+                & ul.jiri__projects__list-edit {
+                    min-height: 46rem;
+                    max-height: 50rem;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-auto-rows: min-content;
+                    column-gap: 2rem;
+                    row-gap: 2rem;
+                    margin: 2rem;
+
+                    & li {
+                        padding: 2rem;
+                        border: 1px solid #000;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 2.8rem;
+                        font-variation-settings: "wght" 500;
+                        height: 4rem;
+                        border-radius: 1rem;
+                        cursor: pointer;
+                        position: relative;
+                        overflow: hidden;
+
+                        & h3 {
+                            text-align: center;
+                            min-width: 90%;
+                        }
+
+                        & span.exit {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            color: white;
+                            font-size: 5rem;
+                            cursor: pointer;
+                            background-color: #d62e00;
+                            min-width: 10%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                    }
+
+                    & li:hover {
+                        box-shadow: inset 0 0 0 2px #0074c2;
+                        background-color: #f7f7f7;
+                    }
+
+                    & li.long {
+                        grid-column: 1 / span 2;
+                        order: 1;
+                    }
+                }
+            }
+
+            & .jiri__modal__form {
+                margin-bottom: 4rem;
+            }
+        }
+    }
+}
+
+.border-container {
+    border: 1px solid black;
+    border-radius: 1rem;
+    overflow: hidden;
+    min-height: 60rem;
+    max-height: 60rem;
+}
+
+.flex-inline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.profile {
+    & .modal {
+        & .modal__content {
+            max-width: min-content;
+        }
+    }
+}
+
+.studentsProjects {
+    font-size: 2.4rem;
+    & li {
+        margin-left: 1rem;
+
+        & .s-name {
+            font-variation-settings: "wght" 700;
+        }
+
+        & .s-projects {
+            margin-left: 2rem;
+        }
+
+        & .s-projects-title {
+            font-variation-settings: "wght" 600;
+        }
+
+        & .s-links {
+            margin-left: 2rem;
+        }
+    }
+}
+
+.modal-title-exit-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    & .flex-title-btns {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        min-width: 100%;
+
+        & div:first-of-type {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-width: 100%;
+        }
+
+        & div:last-of-type {
+            min-width: 100%;
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            flex-wrap: wrap;
+
+            & button {
+                margin: 0 2rem 2rem 0;
+            }
+        }
+    }
+}
+.modal-title-exit-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.confirm__modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 20rem;
+}
+
+.scores,
+.home {
+    & .flex-inline-sb-top {
+        margin-bottom: 4rem;
+
+        & h3 {
+            font-size: 3.2rem;
+        }
+    }
+
+    & .evaluation {
+        & .evaluation__global-score {
+            border: 1px solid black;
+            border-radius: 1rem;
+            padding: 2rem;
+            position: relative;
+
+            & h4 {
+                position: absolute;
+                top: -1.8rem;
+                left: 2rem;
+                background-color: white;
+                font-size: 2.8rem;
+                padding: 0 0.5rem;
+            }
+
+            & p:last-of-type {
+                margin-top: 2rem;
+                line-height: 3rem;
+            }
+        }
+
+        & .evaluation__projects-scores {
+            margin-top: 4rem;
+            & .evaluation__projects-scores__item {
+                border: 1px solid black;
+                border-radius: 1rem;
+                padding: 2rem;
+                margin-bottom: 4rem;
+                position: relative;
+
+                & h4 {
+                    font-size: 2.8rem;
+                    position: absolute;
+                    top: -1.8rem;
+                    left: 2rem;
+                    background-color: white;
+                    padding: 0 0.5rem;
+                }
+
+                & p:last-child {
+                    margin-top: 2rem;
+                    line-height: 3rem;
+                }
+            }
+        }
+    }
+}
+
+.contacts {
+    & form {
+        & .flex-inline-sb {
+            & div:first-child {
+                margin-right: 2rem;
+            }
+        }
+    }
+}

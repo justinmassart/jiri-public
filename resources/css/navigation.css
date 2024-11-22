@@ -1,0 +1,87 @@
+nav.nav {
+    position: fixed;
+    top: 25%;
+    left: 0;
+    min-width: 21rem;
+    max-width: 21rem;
+    min-height: 60rem;
+    display: flex;
+    align-items: center;
+    transform: translate(calc(-100% + 5rem), 0);
+    transition: all 0.3s ease-in-out;
+    z-index: 1000000;
+
+    & .nav__content {
+        max-width: 17.5rem;
+        background: white;
+        border-radius: 0 10px 10px 0;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+
+        & .nav__title {
+            font-size: 8rem;
+            color: #0074c2;
+            font-variation-settings: "wght" 700;
+            margin: 4rem 0 8rem 2rem;
+            display: inline-block;
+        }
+
+        & .nav__link {
+            display: block;
+            font-size: 2.4rem;
+            text-decoration: none;
+            color: black;
+            font-variation-settings: "wght" 300;
+            padding: 2rem;
+        }
+
+        & .nav__link:hover,
+        & .nav__link:focus,
+        & .nav__link:active,
+        & a.current {
+            background-color: #0074c2;
+            color: white;
+        }
+
+        & .nav__logout {
+            & .nav__btn {
+                margin-top: 2rem;
+                font-size: 1.6rem;
+                color: #d62e00;
+                padding: 2rem;
+                min-width: 100%;
+                text-align: start;
+                cursor: pointer;
+            }
+        }
+    }
+
+    & .nav__drawer {
+        cursor: pointer;
+        width: 3.5rem;
+        height: 12rem;
+        background-color: white;
+        border-radius: 0 10px 10px 0;
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        border-left: none;
+        box-shadow: 5px 0 10px rgba(0, 0, 0, 0.05);
+        transform: translateX(-1px);
+        z-index: 1;
+    }
+
+    & .nav__drawer:hover {
+        cursor: pointer;
+    }
+}
+
+nav.nav-open {
+    transform: translate(0, 0);
+
+    & .nav__content {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    & .nav__drawer {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-left: none;
+    }
+}

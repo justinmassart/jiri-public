@@ -1,0 +1,14 @@
+div.home {
+    & .home__startedJiris {
+        margin-bottom: 4rem;
+
+        & .home__startedJiris__jiri {
+            margin-top: 2rem;
+        }
+    }
+
+    & .home__startedJiris__jiri__nav__item,
+    & .second-list__item__infos__projects {
+        max-width: max-content;
+    }
+}

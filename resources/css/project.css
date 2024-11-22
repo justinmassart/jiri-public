@@ -1,0 +1,69 @@
+div.project {
+    & .project__main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: auto;
+        grid-gap: 2rem;
+
+        & .project__main__left {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-auto-rows: auto;
+            grid-gap: 2rem;
+        }
+
+        & .project__main__right {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-auto-rows: auto;
+            grid-gap: 2rem;
+        }
+
+        & .projects__icons {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 10rem);
+            grid-auto-rows: auto;
+            gap: 4rem;
+
+            & .project__icon {
+                position: relative;
+
+                & svg {
+                    width: 10rem;
+                    height: 10rem;
+                    opacity: 0.6;
+                    transition: all 0.2s ease-in-out;
+                    border-radius: 1rem;
+                    border: 1px solid rgba(0, 0, 0, 0);
+                    padding: 1rem;
+                }
+
+                & svg:hover {
+                    opacity: 1;
+                    background-color: white;
+                    border-radius: 1rem;
+                    border: 1px solid rgba(0, 0, 0, 0.1);
+                    box-shadow: 0 0 5rem rgba(0, 0, 0, 0.1);
+                }
+            }
+
+            & .link-preview {
+                text-align: center;
+                display: none;
+                position: absolute;
+                bottom: -3rem;
+                background-color: #f9f9f9;
+                padding: 1rem;
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                border-radius: 0.5rem;
+                z-index: 1000;
+                font-size: 1.6rem;
+                min-width: max-content;
+            }
+
+            & .project__icon:hover .link-preview {
+                display: block;
+            }
+        }
+    }
+}

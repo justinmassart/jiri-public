@@ -1,0 +1,110 @@
+div.scores {
+    & .scores__board {
+        font-size: 2rem;
+        overflow: scroll;
+        & table {
+            min-width: 100%;
+            border-radius: 1rem;
+            & th,
+            td {
+                padding: 1rem;
+                text-align: center;
+                min-width: 15rem;
+
+                & select {
+                    background-color: transparent;
+                    border: none;
+                    font-size: 2.4rem;
+                    min-width: 100%;
+                    min-height: 100%;
+                    text-align: center;
+                    -moz-appearance: none;
+                    -webkit-appearance: none;
+                    appearance: none;
+                }
+            }
+
+            & .projects-columns {
+                font-size: 1.8rem;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    & td.score {
+        vertical-align: middle;
+    }
+
+    .highlighted {
+        /* animation: highlight 1.5s; */
+        background-color: #0074c2;
+        color: white;
+        font-variation-settings: "wght" 700;
+    }
+}
+
+@keyframes highlight {
+    0% {
+        background-color: transparent;
+    }
+    25% {
+        background-color: #0074c2;
+        color: white;
+    }
+    50% {
+        background-color: transparent;
+    }
+    75% {
+        background-color: #0074c2;
+        color: white;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+table thead tr th {
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+table thead tr th.evaluator,
+table thead tr th.cells {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #e5f5ff;
+}
+
+table tbody tr:nth-of-type(odd) td.student {
+    background-color: white;
+}
+
+table tbody tr:nth-of-type(even) td.student {
+    background-color: #e5f5ff;
+}
+
+.sticky-index {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: white;
+}
+
+table thead {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+table th,
+table tr,
+table td:not(:first-of-type):not(:last-of-type) {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.sticky-students {
+    position: sticky;
+    left: 0;
+}
